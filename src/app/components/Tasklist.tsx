@@ -4,7 +4,7 @@ type Props = {}
 
 const Tasklist = (_props: Props) => {
   return (
-    <div>List</div>
+    <div className='text-lg md:text-xl'>List</div>
   )
 }
 
