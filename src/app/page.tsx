@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Header />
       <HomePage />
-      <main className="min-h-[35rem]"></main>
+      <main className="min-h-[12rem]"></main>
       <Footer />
     </main>
   )
