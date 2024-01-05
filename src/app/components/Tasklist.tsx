@@ -1,11 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { Task } from '../interfaces/Task';
 
-type Props = {}
+type Props = {
+  taskList: Task[];
+};
 
-const Tasklist = (_props: Props) => {
+const Tasklist = ({ taskList }: Props) => {
   return (
-    <div className='text-lg md:text-xl'>List</div>
-  )
-}
+    <>
+      {taskList.length > 0 ? (
+        taskList.map((task) => {
+          <div key={task.id}>
+          <p>{task.title}</p>
+          </div>
+        })
+      ) : (
+        <p className='text-lg md:text-2xl mb-6'>No tasks registered</p>
+      )}
+    </>
+  );
+};
 
-export default Tasklist
+export default Tasklist;
